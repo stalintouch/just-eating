@@ -1,4 +1,7 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
+import Toggle from 'material-ui/Toggle';
+import GoogleMaps from './GoogleMaps';
 import {
   Card,
   CardActions,
@@ -7,8 +10,6 @@ import {
   CardTitle,
   CardText
 } from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
-import Toggle from 'material-ui/Toggle';
 
 export default class RestaurantCard extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class RestaurantCard extends React.Component {
 
   handleExpandChange = expanded => {
     this.setState({ expanded: expanded });
+    console.log(this);
   };
 
   handleToggle = (event, toggle) => {
@@ -35,6 +37,17 @@ export default class RestaurantCard extends React.Component {
   };
 
   render() {
+    const cardStyle = {
+      background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(${this.props.backgroundImage}) no-repeat no-repeat center`,
+      minHeight: '200px',
+      marginBottom: '50px',
+      display: 'flex',
+      alignItems: 'center',
+      backgroundSize: 'cover',
+      color: '#fff'
+    };
+
     const {
       name,
       address,
@@ -45,56 +58,59 @@ export default class RestaurantCard extends React.Component {
       price,
       phone,
       reserve_url,
-      image_url
+      image_url,
+      lat,
+      lng
     } = this.props.restaurantInfo;
 
     return (
       <Card
+        style={cardStyle}
         expanded={this.state.expanded}
         onExpandChange={this.handleExpandChange}
       >
         <CardHeader
+          titleColor="#fff"
+          subtitleColor="#fff"
           title={name}
           subtitle={address}
           avatar={image_url}
           actAsExpander={true}
-          showExpandableButton={true}
+          showExpandableButton={false}
         />
-        <CardText>
-          <Toggle
-            toggled={this.state.expanded}
-            onToggle={this.handleToggle}
-            labelPosition="right"
-            label="This toggle controls the expanded state of the component."
-          />
-        </CardText>
-        {/* <CardMedia
-          expandable={true}
-          overlay={
-            <CardTitle title="Overlay title" subtitle="Overlay subtitle" />
-          }
-        >
-          <img src={image_url} alt="" />
-        </CardMedia> */}
+
         <CardTitle
+          
           title="Card title"
           subtitle="Card subtitle"
           expandable={true}
+          titleColor="#fff"
+          subtitleColor="#fff"
         />
-        <CardText expandable={true}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
+
+        <CardText expandable={true} color="#fff">
+          <div className="googlemaps">
+            <GoogleMaps lat={lat} lng={lng} />
+          </div>
+          
+          Lorems ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
+          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
+          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+          Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+          Lorems ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
           pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
           interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
           Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
         </CardText>
+
         <CardActions>
           <RaisedButton
-            label="Expand"
+            label="Read more"
             primary={true}
             onClick={this.handleExpand}
           />
           <RaisedButton
-            label="Reduce"
+            label="Read less"
             secondary={true}
             onClick={this.handleReduce}
           />

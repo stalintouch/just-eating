@@ -1,45 +1,43 @@
 import React, { Component } from 'react';
 import AutoComplete from 'material-ui/AutoComplete';
-import { Divider } from 'material-ui';
-
-const fruit = [
-  'Apple', 'Apricot', 'Avocado',
-  'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry',
-  'Boysenberry', 'Blood Orange',
-  'Cantaloupe', 'Currant', 'Cherry', 'Cherimoya', 'Cloudberry',
-  'Coconut', 'Cranberry', 'Clementine',
-  'Damson', 'Date', 'Dragonfruit', 'Durian',
-  'Elderberry',
-  'Feijoa', 'Fig',
-  'Goji berry', 'Gooseberry', 'Grape', 'Grapefruit', 'Guava',
-  'Honeydew', 'Huckleberry',
-  'Jabouticaba', 'Jackfruit', 'Jambul', 'Jujube', 'Juniper berry',
-  'Kiwi fruit', 'Kumquat',
-  'Lemon', 'Lime', 'Loquat', 'Lychee',
-  'Nectarine',
-  'Mango', 'Marion berry', 'Melon', 'Miracle fruit', 'Mulberry', 'Mandarine',
-  'Olive', 'Orange',
-  'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Physalis', 'Plum', 'Pineapple',
-  'Pumpkin', 'Pomegranate', 'Pomelo', 'Purple Mangosteen',
-  'Quince',
-  'Raspberry', 'Raisin', 'Rambutan', 'Redcurrant',
-  'Salal berry', 'Satsuma', 'Star fruit', 'Strawberry', 'Squash', 'Salmonberry',
-  'Tamarillo', 'Tamarind', 'Tomato', 'Tangerine',
-  'Ugli fruit',
-  'Watermelon',
-];
 
 export default class Form extends Component {
-  render(){
-    return(
-      <div>
+  state = {
+    input: '',
+    cities: ["toronto"],
+    searchText:''
+  };
+
+  handleInput = async e => {
+    await this.setState({ input: e, searchText: e });
+    const response = await fetch(
+      `http://gd.geobytes.com/AutoCompleteCity?&filter=US,CA&q=${
+        this.state.input
+      }`
+    );
+    const data = await response.json();
+    this.setState({ cities: data });
+  };
+
+  update = e => {
+    this.props.updateCity(e);
+  };
+
+  render() {
+    return (
         <AutoComplete
-          floatingLabelText="Type 'peah', fuzzy search"
+          autoFocus
+          listStyle={{ maxHeight: 200, overflow: 'auto' }}
+          floatingLabelText="Type a city and get restaurants"
           filter={AutoComplete.fuzzyFilter}
-          dataSource={fruit}
+          dataSource={this.state.cities}
           maxSearchResults={5}
+          onUpdateInput={this.handleInput}
+          onNewRequest={this.update}
+          disableFocusRipple={false}
+          searchText={this.state.searchText}
+          onChange={e=> console.log(e.target)}
         />
-      </div>
-    )
+    );
   }
 }
