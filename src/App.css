@@ -1,11 +1,41 @@
-.flex{
-  display: flex;
+body, html{
+  height: 100%;
+  width: 100%;
+  color: black;
+  background: #F5F5F5;
+  font-size:14px;
+}
+
+.container{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.App-title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.App-title span{
+  font-size: 3rem;
+  font-family: cursive;
+  border-radius: 10%;
+}
+a{
+  color: rgb(0, 188, 212);
+}
+
+.card-ul{
+  line-height: 200%;
+  list-style: none;
+  padding: 0;
 }
 
 .googlemaps{
-  float: right;
-  height: 200px;
-  width: 30%;
-  position: relative;
-  top:-70px;
+  height: 300px;
+  width: 40%;
+  position: absolute;
+  right: 1%;
+  bottom: 2.5%;
 }

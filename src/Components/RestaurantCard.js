@@ -38,14 +38,16 @@ export default class RestaurantCard extends React.Component {
 
   render() {
     const cardStyle = {
+      width: '100%',
       background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url(${this.props.backgroundImage}) no-repeat no-repeat center`,
       minHeight: '200px',
-      marginBottom: '50px',
+      marginBottom: '20px',
       display: 'flex',
       alignItems: 'center',
       backgroundSize: 'cover',
-      color: '#fff'
+      color: '#fff',
+      position: 'relative'
     };
 
     const {
@@ -70,6 +72,7 @@ export default class RestaurantCard extends React.Component {
         onExpandChange={this.handleExpandChange}
       >
         <CardHeader
+          titleStyle={{ fontSize: '20px' }}
           titleColor="#fff"
           subtitleColor="#fff"
           title={name}
@@ -80,9 +83,8 @@ export default class RestaurantCard extends React.Component {
         />
 
         <CardTitle
-          
-          title="Card title"
-          subtitle="Card subtitle"
+          title={`Serving ${area}`}
+          subtitle={`Price: ${price}`}
           expandable={true}
           titleColor="#fff"
           subtitleColor="#fff"
@@ -92,15 +94,23 @@ export default class RestaurantCard extends React.Component {
           <div className="googlemaps">
             <GoogleMaps lat={lat} lng={lng} />
           </div>
-          
-          Lorems ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
-          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-          Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-          Lorems ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
-          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-          Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+          <ul className="card-ul">
+            <li>
+              Full Address: {address}, {postal_code}{' '}
+            </li>
+            <li>Phone: {phone}</li>
+            <li>
+              Website:{' '}
+              <a
+                href={reserve_url}
+                title={`${name} restaurant`}
+                target="_blank"
+              >
+                {reserve_url}
+              </a>
+            </li>
+            <li />
+          </ul>
         </CardText>
 
         <CardActions>

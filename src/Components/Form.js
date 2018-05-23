@@ -4,8 +4,8 @@ import AutoComplete from 'material-ui/AutoComplete';
 export default class Form extends Component {
   state = {
     input: '',
-    cities: ["toronto"],
-    searchText:''
+    cities: [''],
+    searchText: ''
   };
 
   handleInput = async e => {
@@ -25,8 +25,12 @@ export default class Form extends Component {
 
   render() {
     return (
+      <div>
         <AutoComplete
+          id="autoComplete"
+          fullWidth={true}
           autoFocus
+          textFieldStyle={{}}
           listStyle={{ maxHeight: 200, overflow: 'auto' }}
           floatingLabelText="Type a city and get restaurants"
           filter={AutoComplete.fuzzyFilter}
@@ -36,8 +40,9 @@ export default class Form extends Component {
           onNewRequest={this.update}
           disableFocusRipple={false}
           searchText={this.state.searchText}
-          onChange={e=> console.log(e.target)}
+          onChange={e => console.log(e.target)}
         />
+      </div>
     );
   }
 }
