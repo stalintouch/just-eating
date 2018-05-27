@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import RestaurantCard from './RestaurantCard';
+import NotFound from './NotFound';
+import CircularProgress from 'material-ui/CircularProgress';
+import FlatButton from 'material-ui/FlatButton';
+import focus from '../scripts/focus';
 
 class Restaurant extends Component {
   constructor(props) {
     super(props);
-    this.state = { urls: [] };
+    this.state = { urls: [], loading: true };
   }
 
   async componentDidMount() {
@@ -13,6 +17,12 @@ class Restaurant extends Component {
     )
       .then(res => res.json())
       .then(data => this.setState({ urls: data.results }));
+  }
+
+  componentWillReceiveProps() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000);
   }
 
   renderCards = () => {
@@ -28,7 +38,29 @@ class Restaurant extends Component {
   };
 
   render() {
-    return <div>{this.renderCards()}</div>;
+    if (!this.props.restaurants.length && this.state.loading) {
+      return (
+        <div style={{ display: ' flex', justifyContent: 'center' }}>
+          <CircularProgress size={180} thickness={15} />
+        </div>
+      );
+    } else if (!this.props.restaurants.length && !this.state.loading) {
+      return <NotFound />;
+    } else {
+      return (
+        <div>
+          <div style={{ marginBottom: '30px' }}>
+            Not in {this.props.city}? Change it&nbsp;&nbsp;
+            <FlatButton
+              label="Here"
+              onClick={() => focus('autoComplete')}
+              backgroundColor="#FFFF00"
+            />
+          </div>
+          {this.renderCards()} 
+        </div>
+      );
+    }
   }
 }
 

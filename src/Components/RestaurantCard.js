@@ -21,7 +21,6 @@ export default class RestaurantCard extends React.Component {
 
   handleExpandChange = expanded => {
     this.setState({ expanded: expanded });
-    console.log(this);
   };
 
   handleToggle = (event, toggle) => {

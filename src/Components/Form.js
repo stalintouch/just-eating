@@ -4,7 +4,7 @@ import AutoComplete from 'material-ui/AutoComplete';
 export default class Form extends Component {
   state = {
     input: '',
-    cities: [''],
+    cities: [],
     searchText: ''
   };
 
@@ -17,6 +17,7 @@ export default class Form extends Component {
     );
     const data = await response.json();
     this.setState({ cities: data });
+    
   };
 
   update = e => {
@@ -40,7 +41,6 @@ export default class Form extends Component {
           onNewRequest={this.update}
           disableFocusRipple={false}
           searchText={this.state.searchText}
-          onChange={e => console.log(e.target)}
         />
       </div>
     );

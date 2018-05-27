@@ -4,5 +4,5 @@ export default function fetchLocation() {
       'Content-Type': 'application/json',
       Accept: 'application/json'
     }
-  });
+  }).then(data => data.json());
 }

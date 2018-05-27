@@ -39,3 +39,9 @@ a{
   right: 1%;
   bottom: 2.5%;
 }
+
+.not-found{
+  font-size: 30;
+  color:red;
+  text-align: center;
+}
