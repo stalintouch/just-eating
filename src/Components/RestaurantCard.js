@@ -1,12 +1,10 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import Toggle from 'material-ui/Toggle';
 import GoogleMaps from './GoogleMaps';
 import {
   Card,
   CardActions,
   CardHeader,
-  CardMedia,
   CardTitle,
   CardText
 } from 'material-ui/Card';
@@ -52,10 +50,8 @@ export default class RestaurantCard extends React.Component {
     const {
       name,
       address,
-      city,
       area,
       postal_code,
-      country,
       price,
       phone,
       reserve_url,

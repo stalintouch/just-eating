@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
+import fetchJSON from '../scripts/fetchJSON';
 import RestaurantCard from './RestaurantCard';
 import NotFound from './NotFound';
 import CircularProgress from 'material-ui/CircularProgress';
 import FlatButton from 'material-ui/FlatButton';
 import focus from '../scripts/focus';
+const imagesUrl =
+  'https://api.unsplash.com/search/photos?client_id=cdaa537bca08095f8342feb8bc2e12893de05e62eba059daed8dba9e13e046bd&page=1&query=food&per_page=100';
 
 class Restaurant extends Component {
   constructor(props) {
     super(props);
-    this.state = { urls: [], loading: true };
+    this.state = { backgroundImages: [], loading: true };
   }
 
   async componentDidMount() {
-    await fetch(
-      'https://api.unsplash.com/search/photos?client_id=cdaa537bca08095f8342feb8bc2e12893de05e62eba059daed8dba9e13e046bd&page=1&query=food&per_page=100'
-    )
-      .then(res => res.json())
-      .then(data => this.setState({ urls: data.results }));
+    const images = await fetchJSON(imagesUrl);
+    this.setState({ backgroundImages: images.results });
   }
 
   componentWillReceiveProps() {
@@ -29,7 +29,7 @@ class Restaurant extends Component {
     return this.props.restaurants.map((restaurant, idx) => {
       return (
         <RestaurantCard
-          backgroundImage={this.state.urls[idx].urls.full}
+          backgroundImage={this.state.backgroundImages[idx].urls.full}
           key={restaurant.id}
           restaurantInfo={restaurant}
         />
@@ -57,7 +57,7 @@ class Restaurant extends Component {
               backgroundColor="#FFFF00"
             />
           </div>
-          {this.renderCards()} 
+          {this.renderCards()}
         </div>
       );
     }
