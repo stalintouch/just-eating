@@ -16,7 +16,7 @@ export default class RestaurantCard extends React.Component {
       expanded: false
     };
   }
-
+//  these 4 functions handles the toggling of a card to display more information
   handleExpandChange = expanded => {
     this.setState({ expanded: expanded });
   };
@@ -34,6 +34,7 @@ export default class RestaurantCard extends React.Component {
   };
 
   render() {
+    // styles for the component
     const cardStyle = {
       width: '100%',
       background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 

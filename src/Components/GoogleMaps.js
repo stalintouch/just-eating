@@ -1,7 +1,9 @@
 /* global google */
 import React, { Component } from 'react';
 
+// this component creates a google map with the received props
 export default class GoogleMaps extends Component {
+  
   componentDidMount() {
     const {lat, lng} = this.props
     var map = new google.maps.Map(this.refs.map, {

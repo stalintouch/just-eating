@@ -8,6 +8,7 @@ export default class Form extends Component {
     searchText: ''
   };
 
+  // this function calls an api for autocomplete functionality on the search bar
   handleInput = async e => {
     await this.setState({ input: e, searchText: e });
     const response = await fetch(
@@ -20,6 +21,7 @@ export default class Form extends Component {
     
   };
 
+  // this functions pass the input on the form to the parent component 
   update = e => {
     this.props.updateCity(e);
   };

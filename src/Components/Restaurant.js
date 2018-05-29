@@ -5,6 +5,7 @@ import NotFound from './NotFound';
 import CircularProgress from 'material-ui/CircularProgress';
 import FlatButton from 'material-ui/FlatButton';
 import focus from '../scripts/focus';
+import App from '../App';
 const imagesUrl =
   'https://api.unsplash.com/search/photos?client_id=cdaa537bca08095f8342feb8bc2e12893de05e62eba059daed8dba9e13e046bd&page=1&query=food&per_page=100';
 
@@ -13,18 +14,22 @@ class Restaurant extends Component {
     super(props);
     this.state = { backgroundImages: [], loading: true };
   }
-
+  // fetches the background images from unsplash, to display them as background
   async componentDidMount() {
     const images = await fetchJSON(imagesUrl);
     this.setState({ backgroundImages: images.results });
   }
 
   componentWillReceiveProps() {
+    // this settimeout is to make sure the loading spinner disappears after the component receive 
+    // props but not too soon so it shows the not found component
     setTimeout(() => {
       this.setState({ loading: false });
     }, 1000);
   }
 
+  // renderCards loops throught the props received from App.js and assembles a RestaurantCard with the
+  // proper info passed 
   renderCards = () => {
     return this.props.restaurants.map((restaurant, idx) => {
       return (
@@ -38,12 +43,14 @@ class Restaurant extends Component {
   };
 
   render() {
+    // shows the loading spinner
     if (!this.props.restaurants.length && this.state.loading) {
       return (
         <div style={{ display: ' flex', justifyContent: 'center' }}>
           <CircularProgress size={180} thickness={15} />
         </div>
       );
+      // shows the not found component
     } else if (!this.props.restaurants.length && !this.state.loading) {
       return <NotFound />;
     } else {
@@ -57,6 +64,7 @@ class Restaurant extends Component {
               backgroundColor="#FFFF00"
             />
           </div>
+          {/* shows the RestaurantCard component */}
           {this.renderCards()}
         </div>
       );

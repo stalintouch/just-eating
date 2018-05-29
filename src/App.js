@@ -3,9 +3,9 @@ import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Restaurant from './Components/Restaurant';
 import fetchJSON from './scripts/fetchJSON';
-import getRestaurantInfo from './scripts/getRestaurantInfo';
 import Form from './Components/Form';
 import Navbar from './Components/Navbar';
+const restaurantAPIUrl = 'http://opentable.herokuapp.com/api/restaurants?city=';
 
 class App extends Component {
   state = { city: '', restaurants: [] };
@@ -16,9 +16,12 @@ class App extends Component {
       accept: 'application/json',
       'Content-Type': 'application/json'
     });
+
     this.setState({ city: location.city || 'toronto' });
-    const restaurants = await getRestaurantInfo(this.state.city);
-    this.setState({ restaurants });
+    const restaurants = await fetchJSON(
+      `${restaurantAPIUrl + this.state.city}`
+    );
+    this.setState({ restaurants: restaurants.restaurants });
   }
 
   updateInput = async inputCity => {
@@ -28,7 +31,9 @@ class App extends Component {
       .join('');
 
     this.setState({ city });
-    const restaurants = await getRestaurantInfo(this.state.city);
+    const restaurants = await fetchJSON(
+      `${restaurantAPIUrl + this.state.city}`
+    );
     this.setState({ restaurants });
   };
 
