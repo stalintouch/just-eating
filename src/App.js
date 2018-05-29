@@ -5,7 +5,8 @@ import Restaurant from './Components/Restaurant';
 import fetchJSON from './scripts/fetchJSON';
 import Form from './Components/Form';
 import Navbar from './Components/Navbar';
-const restaurantAPIUrl = 'http://opentable.herokuapp.com/api/restaurants?city=';
+const restaurantAPIUrl =
+  'https://opentable.herokuapp.com/api/restaurants?city=';
 
 class App extends Component {
   state = { city: '', restaurants: [] };
