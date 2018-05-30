@@ -5,7 +5,6 @@ import NotFound from './NotFound';
 import CircularProgress from 'material-ui/CircularProgress';
 import FlatButton from 'material-ui/FlatButton';
 import focus from '../scripts/focus';
-import App from '../App';
 const imagesUrl =
   'https://api.unsplash.com/search/photos?client_id=cdaa537bca08095f8342feb8bc2e12893de05e62eba059daed8dba9e13e046bd&page=1&query=food&per_page=100';
 
@@ -21,7 +20,7 @@ class Restaurant extends Component {
   }
 
   componentWillReceiveProps() {
-    // this settimeout is to make sure the loading spinner disappears after the component receive 
+    // this settimeout is to make sure the loading spinner disappears after the component receive
     // props but not too soon so it shows the not found component
     setTimeout(() => {
       this.setState({ loading: false });
@@ -29,7 +28,7 @@ class Restaurant extends Component {
   }
 
   // renderCards loops throught the props received from App.js and assembles a RestaurantCard with the
-  // proper info passed 
+  // proper info passed
   renderCards = () => {
     return this.props.restaurants.map((restaurant, idx) => {
       return (

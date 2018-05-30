@@ -35,7 +35,7 @@ class App extends Component {
     const restaurants = await fetchJSON(
       `${restaurantAPIUrl + this.state.city}`
     );
-    this.setState({ restaurants });
+    this.setState({ restaurants: restaurants.restaurants });
   };
 
   render() {

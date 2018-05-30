@@ -20,7 +20,7 @@ export default class AppBarExampleIconButton extends Component {
 
     return (
       <AppBar
-        title={<span style={styles.title}>Just Eat it!</span>}
+        title={<span className="title-left" style={styles.title}>Just Eat it!</span>}
         onTitleClick={this.handleClick}
         onRightIconButtonClick={this.handleClick}
         iconElementLeft={<IconButton />}

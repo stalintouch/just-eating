@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AutoComplete from 'material-ui/AutoComplete';
+import fetchJSON from '../scripts/fetchJSON';
 
 export default class Form extends Component {
   state = {
@@ -11,17 +12,15 @@ export default class Form extends Component {
   // this function calls an api for autocomplete functionality on the search bar
   handleInput = async e => {
     await this.setState({ input: e, searchText: e });
-    const response = await fetch(
-      `http://gd.geobytes.com/AutoCompleteCity?&filter=US,CA&q=${
+    const cities = await fetchJSON(
+      `https://cors-anywhere.herokuapp.com/http://gd.geobytes.com/AutoCompleteCity?&filter=US,CA&q=${
         this.state.input
       }`
     );
-    const data = await response.json();
-    this.setState({ cities: data });
-    
+    this.setState({ cities });
   };
 
-  // this functions pass the input on the form to the parent component 
+  // this functions pass the input on the form to the parent component
   update = e => {
     this.props.updateCity(e);
   };

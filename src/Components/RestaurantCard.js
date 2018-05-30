@@ -87,9 +87,7 @@ export default class RestaurantCard extends React.Component {
         />
 
         <CardText expandable={true} color="#fff">
-          <div className="googlemaps">
-            <GoogleMaps lat={lat} lng={lng} />
-          </div>
+          
           <ul className="card-ul">
             <li>
               Full Address: {address}, {postal_code}{' '}
@@ -107,6 +105,9 @@ export default class RestaurantCard extends React.Component {
             </li>
             <li />
           </ul>
+          <div className="googlemaps">
+            <GoogleMaps lat={lat} lng={lng} />
+          </div>
         </CardText>
 
         <CardActions>
