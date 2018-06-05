@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import FlatButton from 'material-ui/FlatButton';
-import focus from '../scripts/focus'
 
 export default class AppBarExampleIconButton extends Component {
-
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
   // this function auto focus on the search bar when the navbar is clicked
-  handleClick = () => {
-    focus('autoComplete');
-  };
+  handleClick() {
+    this.props.focus('autoComplete');
+  }
 
   render() {
     const styles = {
@@ -20,12 +22,19 @@ export default class AppBarExampleIconButton extends Component {
 
     return (
       <AppBar
-        title={<span className="title-left" style={styles.title}>Just Eat it!</span>}
-        onTitleClick={this.handleClick}
-        onRightIconButtonClick={this.handleClick}
+        className="navbar"
+        title={
+          <span className="title-left" style={styles.title}>
+            Just Eat it!
+          </span>
+        }
+        onClick={this.handleClick}
         iconElementLeft={<IconButton />}
         iconElementRight={<FlatButton label="Find Restaurants nearby" />}
       />
     );
   }
+}
+{
+  /* <button id="pepe" type="submit" onClick={this.handleClick}></button> */
 }

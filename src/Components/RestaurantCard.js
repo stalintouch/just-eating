@@ -13,24 +13,21 @@ export default class RestaurantCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false
+      expanded: false,
+      showReadMore: true
     };
   }
-//  these 4 functions handles the toggling of a card to display more information
+  //  these 3 functions handles the toggling of a card to display more information
   handleExpandChange = expanded => {
     this.setState({ expanded: expanded });
   };
 
-  handleToggle = (event, toggle) => {
-    this.setState({ expanded: toggle });
-  };
-
   handleExpand = () => {
-    this.setState({ expanded: true });
+    this.setState({ expanded: true, showReadMore: false });
   };
 
   handleReduce = () => {
-    this.setState({ expanded: false });
+    this.setState({ expanded: false, showReadMore: true });
   };
 
   render() {
@@ -48,6 +45,7 @@ export default class RestaurantCard extends React.Component {
       position: 'relative'
     };
 
+    // Destructuring props
     const {
       name,
       address,
@@ -87,14 +85,13 @@ export default class RestaurantCard extends React.Component {
         />
 
         <CardText expandable={true} color="#fff">
-          
           <ul className="card-ul">
             <li>
-              Full Address: {address}, {postal_code}{' '}
+              Full Address: {address}, {postal_code}
             </li>
             <li>Phone: {phone}</li>
             <li>
-              Website:{' '}
+              Website:&nbsp;
               <a
                 href={reserve_url}
                 title={`${name} restaurant`}
@@ -111,16 +108,20 @@ export default class RestaurantCard extends React.Component {
         </CardText>
 
         <CardActions>
-          <RaisedButton
-            label="Read more"
-            primary={true}
-            onClick={this.handleExpand}
-          />
-          <RaisedButton
-            label="Read less"
-            secondary={true}
-            onClick={this.handleReduce}
-          />
+          {this.state.showReadMore && (
+            <RaisedButton
+              label="Read more"
+              primary={true}
+              onClick={this.handleExpand}
+            />
+          )}
+          {!this.state.showReadMore && (
+            <RaisedButton
+              label="Read less"
+              secondary={true}
+              onClick={this.handleReduce}
+            />
+          )}
         </CardActions>
       </Card>
     );

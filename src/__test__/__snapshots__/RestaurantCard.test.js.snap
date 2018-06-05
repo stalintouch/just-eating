@@ -1,0 +1,775 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RestaurantCard /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RestaurantCard
+    restaurantInfo={
+        Object {
+            "address": "test",
+            "area": "test",
+            "image_url": "test",
+            "lat": "test",
+            "lng": "test",
+            "name": "test",
+            "phone": "555-555-5555",
+            "postal_code": "test",
+            "price": 1,
+            "reserve_url": "test",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <CardHeader
+          actAsExpander={true}
+          avatar="test"
+          showExpandableButton={false}
+          subtitle="test"
+          subtitleColor="#fff"
+          title="test"
+          titleColor="#fff"
+          titleStyle={
+                    Object {
+                              "fontSize": "20px",
+                            }
+          }
+/>,
+        <CardTitle
+          expandable={true}
+          subtitle="Price: 1"
+          subtitleColor="#fff"
+          title="Serving test"
+          titleColor="#fff"
+/>,
+        <CardText
+          color="#fff"
+          expandable={true}
+>
+          <ul
+                    className="card-ul"
+          >
+                    <li>
+                              Full Address: 
+                              test
+                              , 
+                              test
+                    </li>
+                    <li>
+                              Phone: 
+                              555-555-5555
+                    </li>
+                    <li>
+                              Website: 
+                              <a
+                                        href="test"
+                                        target="_blank"
+                                        title="test restaurant"
+                              >
+                                        test
+                              </a>
+                    </li>
+                    <li />
+          </ul>
+          <div
+                    className="googlemaps"
+          >
+                    <GoogleMaps
+                              lat="test"
+                              lng="test"
+                    />
+          </div>
+</CardText>,
+        <CardActions>
+          <RaisedButton
+                    disabled={false}
+                    fullWidth={false}
+                    label="Read more"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={true}
+                    secondary={false}
+          />
+</CardActions>,
+      ],
+      "expandable": false,
+      "expanded": false,
+      "initiallyExpanded": false,
+      "onExpandChange": [Function],
+      "style": Object {
+        "alignItems": "center",
+        "background": "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(undefined) no-repeat no-repeat center",
+        "backgroundSize": "cover",
+        "color": "#fff",
+        "display": "flex",
+        "marginBottom": "20px",
+        "minHeight": "200px",
+        "position": "relative",
+        "width": "100%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "actAsExpander": true,
+          "avatar": "test",
+          "showExpandableButton": false,
+          "subtitle": "test",
+          "subtitleColor": "#fff",
+          "title": "test",
+          "titleColor": "#fff",
+          "titleStyle": Object {
+            "fontSize": "20px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "expandable": true,
+          "subtitle": "Price: 1",
+          "subtitleColor": "#fff",
+          "title": "Serving test",
+          "titleColor": "#fff",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <ul
+              className="card-ul"
+>
+              <li>
+                            Full Address: 
+                            test
+                            , 
+                            test
+              </li>
+              <li>
+                            Phone: 
+                            555-555-5555
+              </li>
+              <li>
+                            Website: 
+                            <a
+                                          href="test"
+                                          target="_blank"
+                                          title="test restaurant"
+                            >
+                                          test
+                            </a>
+              </li>
+              <li />
+</ul>,
+            <div
+              className="googlemaps"
+>
+              <GoogleMaps
+                            lat="test"
+                            lng="test"
+              />
+</div>,
+          ],
+          "color": "#fff",
+          "expandable": true,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Full Address: 
+                  test
+                  , 
+                  test
+</li>,
+                <li>
+                  Phone: 
+                  555-555-5555
+</li>,
+                <li>
+                  Website: 
+                  <a
+                                    href="test"
+                                    target="_blank"
+                                    title="test restaurant"
+                  >
+                                    test
+                  </a>
+</li>,
+                <li />,
+              ],
+              "className": "card-ul",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Full Address: ",
+                    "test",
+                    ", ",
+                    "test",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Full Address: ",
+                  "test",
+                  ", ",
+                  "test",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Phone: ",
+                    "555-555-5555",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Phone: ",
+                  "555-555-5555",
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Website: ",
+                    <a
+                      href="test"
+                      target="_blank"
+                      title="test restaurant"
+>
+                      test
+</a>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Website: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "test",
+                      "href": "test",
+                      "target": "_blank",
+                      "title": "test restaurant",
+                    },
+                    "ref": null,
+                    "rendered": "test",
+                    "type": "a",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <GoogleMaps
+                lat="test"
+                lng="test"
+/>,
+              "className": "googlemaps",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "lat": "test",
+                "lng": "test",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <RaisedButton
+              disabled={false}
+              fullWidth={false}
+              label="Read more"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={true}
+              secondary={false}
+/>,
+            false,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Read more",
+              "labelPosition": "after",
+              "onClick": [Function],
+              "primary": true,
+              "secondary": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          false,
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <CardHeader
+            actAsExpander={true}
+            avatar="test"
+            showExpandableButton={false}
+            subtitle="test"
+            subtitleColor="#fff"
+            title="test"
+            titleColor="#fff"
+            titleStyle={
+                        Object {
+                                    "fontSize": "20px",
+                                  }
+            }
+/>,
+          <CardTitle
+            expandable={true}
+            subtitle="Price: 1"
+            subtitleColor="#fff"
+            title="Serving test"
+            titleColor="#fff"
+/>,
+          <CardText
+            color="#fff"
+            expandable={true}
+>
+            <ul
+                        className="card-ul"
+            >
+                        <li>
+                                    Full Address: 
+                                    test
+                                    , 
+                                    test
+                        </li>
+                        <li>
+                                    Phone: 
+                                    555-555-5555
+                        </li>
+                        <li>
+                                    Website: 
+                                    <a
+                                                href="test"
+                                                target="_blank"
+                                                title="test restaurant"
+                                    >
+                                                test
+                                    </a>
+                        </li>
+                        <li />
+            </ul>
+            <div
+                        className="googlemaps"
+            >
+                        <GoogleMaps
+                                    lat="test"
+                                    lng="test"
+                        />
+            </div>
+</CardText>,
+          <CardActions>
+            <RaisedButton
+                        disabled={false}
+                        fullWidth={false}
+                        label="Read more"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={true}
+                        secondary={false}
+            />
+</CardActions>,
+        ],
+        "expandable": false,
+        "expanded": false,
+        "initiallyExpanded": false,
+        "onExpandChange": [Function],
+        "style": Object {
+          "alignItems": "center",
+          "background": "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(undefined) no-repeat no-repeat center",
+          "backgroundSize": "cover",
+          "color": "#fff",
+          "display": "flex",
+          "marginBottom": "20px",
+          "minHeight": "200px",
+          "position": "relative",
+          "width": "100%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "actAsExpander": true,
+            "avatar": "test",
+            "showExpandableButton": false,
+            "subtitle": "test",
+            "subtitleColor": "#fff",
+            "title": "test",
+            "titleColor": "#fff",
+            "titleStyle": Object {
+              "fontSize": "20px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "expandable": true,
+            "subtitle": "Price: 1",
+            "subtitleColor": "#fff",
+            "title": "Serving test",
+            "titleColor": "#fff",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <ul
+                className="card-ul"
+>
+                <li>
+                                Full Address: 
+                                test
+                                , 
+                                test
+                </li>
+                <li>
+                                Phone: 
+                                555-555-5555
+                </li>
+                <li>
+                                Website: 
+                                <a
+                                                href="test"
+                                                target="_blank"
+                                                title="test restaurant"
+                                >
+                                                test
+                                </a>
+                </li>
+                <li />
+</ul>,
+              <div
+                className="googlemaps"
+>
+                <GoogleMaps
+                                lat="test"
+                                lng="test"
+                />
+</div>,
+            ],
+            "color": "#fff",
+            "expandable": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    Full Address: 
+                    test
+                    , 
+                    test
+</li>,
+                  <li>
+                    Phone: 
+                    555-555-5555
+</li>,
+                  <li>
+                    Website: 
+                    <a
+                                        href="test"
+                                        target="_blank"
+                                        title="test restaurant"
+                    >
+                                        test
+                    </a>
+</li>,
+                  <li />,
+                ],
+                "className": "card-ul",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Full Address: ",
+                      "test",
+                      ", ",
+                      "test",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Full Address: ",
+                    "test",
+                    ", ",
+                    "test",
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Phone: ",
+                      "555-555-5555",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Phone: ",
+                    "555-555-5555",
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Website: ",
+                      <a
+                        href="test"
+                        target="_blank"
+                        title="test restaurant"
+>
+                        test
+</a>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Website: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "test",
+                        "href": "test",
+                        "target": "_blank",
+                        "title": "test restaurant",
+                      },
+                      "ref": null,
+                      "rendered": "test",
+                      "type": "a",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <GoogleMaps
+                  lat="test"
+                  lng="test"
+/>,
+                "className": "googlemaps",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "lat": "test",
+                  "lng": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <RaisedButton
+                disabled={false}
+                fullWidth={false}
+                label="Read more"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={true}
+                secondary={false}
+/>,
+              false,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Read more",
+                "labelPosition": "after",
+                "onClick": [Function],
+                "primary": true,
+                "secondary": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            false,
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

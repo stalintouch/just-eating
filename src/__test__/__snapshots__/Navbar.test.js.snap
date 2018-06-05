@@ -17,6 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "className": "navbar",
       "iconElementLeft": <IconButton
         disableTouchRipple={false}
         disabled={false}
@@ -37,10 +38,10 @@ ShallowWrapper {
         primary={false}
         secondary={false}
 />,
-      "onRightIconButtonClick": [Function],
-      "onTitleClick": [Function],
+      "onClick": [Function],
       "showMenuIconButton": true,
       "title": <span
+        className="title-left"
         style={
                 Object {
                         "cursor": "pointer",
@@ -61,6 +62,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "className": "navbar",
         "iconElementLeft": <IconButton
           disableTouchRipple={false}
           disabled={false}
@@ -81,10 +83,10 @@ ShallowWrapper {
           primary={false}
           secondary={false}
 />,
-        "onRightIconButtonClick": [Function],
-        "onTitleClick": [Function],
+        "onClick": [Function],
         "showMenuIconButton": true,
         "title": <span
+          className="title-left"
           style={
                     Object {
                               "cursor": "pointer",
@@ -106,6 +108,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "disableLifecycleMethods": true,
   },
 }
 `;

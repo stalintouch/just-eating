@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Form />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <form
+        onSubmit={[Function]}
+        value=""
+>
+        <AutoComplete
+                anchorOrigin={
+                        Object {
+                                "horizontal": "left",
+                                "vertical": "bottom",
+                              }
+                }
+                animated={true}
+                autoFocus={true}
+                dataSource={Array []}
+                dataSourceConfig={
+                        Object {
+                                "text": "text",
+                                "value": "value",
+                              }
+                }
+                disableFocusRipple={false}
+                filter={[Function]}
+                floatingLabelText="Type a city and get restaurants"
+                fullWidth={true}
+                id="autoComplete"
+                listStyle={
+                        Object {
+                                "maxHeight": 200,
+                                "overflow": "auto",
+                              }
+                }
+                maxSearchResults={5}
+                menuCloseDelay={300}
+                onNewRequest={[Function]}
+                onUpdateInput={[Function]}
+                open={false}
+                openOnFocus={false}
+                targetOrigin={
+                        Object {
+                                "horizontal": "left",
+                                "vertical": "top",
+                              }
+                }
+        />
+</form>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <AutoComplete
+          anchorOrigin={
+                    Object {
+                              "horizontal": "left",
+                              "vertical": "bottom",
+                            }
+          }
+          animated={true}
+          autoFocus={true}
+          dataSource={Array []}
+          dataSourceConfig={
+                    Object {
+                              "text": "text",
+                              "value": "value",
+                            }
+          }
+          disableFocusRipple={false}
+          filter={[Function]}
+          floatingLabelText="Type a city and get restaurants"
+          fullWidth={true}
+          id="autoComplete"
+          listStyle={
+                    Object {
+                              "maxHeight": 200,
+                              "overflow": "auto",
+                            }
+          }
+          maxSearchResults={5}
+          menuCloseDelay={300}
+          onNewRequest={[Function]}
+          onUpdateInput={[Function]}
+          open={false}
+          openOnFocus={false}
+          targetOrigin={
+                    Object {
+                              "horizontal": "left",
+                              "vertical": "top",
+                            }
+          }
+/>,
+        "onSubmit": [Function],
+        "value": "",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "anchorOrigin": Object {
+            "horizontal": "left",
+            "vertical": "bottom",
+          },
+          "animated": true,
+          "autoFocus": true,
+          "dataSource": Array [],
+          "dataSourceConfig": Object {
+            "text": "text",
+            "value": "value",
+          },
+          "disableFocusRipple": false,
+          "filter": [Function],
+          "floatingLabelText": "Type a city and get restaurants",
+          "fullWidth": true,
+          "id": "autoComplete",
+          "listStyle": Object {
+            "maxHeight": 200,
+            "overflow": "auto",
+          },
+          "maxSearchResults": 5,
+          "menuCloseDelay": 300,
+          "onNewRequest": [Function],
+          "onUpdateInput": [Function],
+          "open": false,
+          "openOnFocus": false,
+          "targetOrigin": Object {
+            "horizontal": "left",
+            "vertical": "top",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "form",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          onSubmit={[Function]}
+          value=""
+>
+          <AutoComplete
+                    anchorOrigin={
+                              Object {
+                                        "horizontal": "left",
+                                        "vertical": "bottom",
+                                      }
+                    }
+                    animated={true}
+                    autoFocus={true}
+                    dataSource={Array []}
+                    dataSourceConfig={
+                              Object {
+                                        "text": "text",
+                                        "value": "value",
+                                      }
+                    }
+                    disableFocusRipple={false}
+                    filter={[Function]}
+                    floatingLabelText="Type a city and get restaurants"
+                    fullWidth={true}
+                    id="autoComplete"
+                    listStyle={
+                              Object {
+                                        "maxHeight": 200,
+                                        "overflow": "auto",
+                                      }
+                    }
+                    maxSearchResults={5}
+                    menuCloseDelay={300}
+                    onNewRequest={[Function]}
+                    onUpdateInput={[Function]}
+                    open={false}
+                    openOnFocus={false}
+                    targetOrigin={
+                              Object {
+                                        "horizontal": "left",
+                                        "vertical": "top",
+                                      }
+                    }
+          />
+</form>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <AutoComplete
+            anchorOrigin={
+                        Object {
+                                    "horizontal": "left",
+                                    "vertical": "bottom",
+                                  }
+            }
+            animated={true}
+            autoFocus={true}
+            dataSource={Array []}
+            dataSourceConfig={
+                        Object {
+                                    "text": "text",
+                                    "value": "value",
+                                  }
+            }
+            disableFocusRipple={false}
+            filter={[Function]}
+            floatingLabelText="Type a city and get restaurants"
+            fullWidth={true}
+            id="autoComplete"
+            listStyle={
+                        Object {
+                                    "maxHeight": 200,
+                                    "overflow": "auto",
+                                  }
+            }
+            maxSearchResults={5}
+            menuCloseDelay={300}
+            onNewRequest={[Function]}
+            onUpdateInput={[Function]}
+            open={false}
+            openOnFocus={false}
+            targetOrigin={
+                        Object {
+                                    "horizontal": "left",
+                                    "vertical": "top",
+                                  }
+            }
+/>,
+          "onSubmit": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "anchorOrigin": Object {
+              "horizontal": "left",
+              "vertical": "bottom",
+            },
+            "animated": true,
+            "autoFocus": true,
+            "dataSource": Array [],
+            "dataSourceConfig": Object {
+              "text": "text",
+              "value": "value",
+            },
+            "disableFocusRipple": false,
+            "filter": [Function],
+            "floatingLabelText": "Type a city and get restaurants",
+            "fullWidth": true,
+            "id": "autoComplete",
+            "listStyle": Object {
+              "maxHeight": 200,
+              "overflow": "auto",
+            },
+            "maxSearchResults": 5,
+            "menuCloseDelay": 300,
+            "onNewRequest": [Function],
+            "onUpdateInput": [Function],
+            "open": false,
+            "openOnFocus": false,
+            "targetOrigin": Object {
+              "horizontal": "left",
+              "vertical": "top",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "form",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
