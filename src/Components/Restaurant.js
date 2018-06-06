@@ -16,7 +16,6 @@ class Restaurant extends Component {
   // fetches the background images from unsplash, to display them as background
   async componentDidMount() {
     const images = await fetchJSON(imagesUrl);
-    console.log(images);
     this.setState({ backgroundImages: images.results });
   }
 
@@ -36,11 +35,13 @@ class Restaurant extends Component {
   renderCards = () => {
     return this.props.restaurants.map((restaurant, idx) => {
       return (
-        <RestaurantCard
-          backgroundImage={this.state.backgroundImages[idx].urls.full}
-          key={restaurant.id}
-          restaurantInfo={restaurant}
-        />
+        this.state.backgroundImages.length && (
+          <RestaurantCard
+            backgroundImage={this.state.backgroundImages[idx].urls.full}
+            key={restaurant.id}
+            restaurantInfo={restaurant}
+          />
+        )
       );
     });
   };

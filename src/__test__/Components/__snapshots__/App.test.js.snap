@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="container"
+>
+        <AppBarExampleIconButton
+                focus={[Function]}
+        />
+        <header
+                className="App-header"
+        >
+                <h1
+                        className="App-title"
+                >
+                        Find the best restaurants, cafés, and bars in
+                        <span>
+                                 
+                                
+                        </span>
+                </h1>
+        </header>
+        <Form
+                updateCity={[Function]}
+        />
+        <Restaurant
+                city=""
+                focus={[Function]}
+                restaurants={Array []}
+        />
+</div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <AppBarExampleIconButton
+            focus={[Function]}
+/>,
+          <header
+            className="App-header"
+>
+            <h1
+                        className="App-title"
+            >
+                        Find the best restaurants, cafés, and bars in
+                        <span>
+                                     
+                                    
+                        </span>
+            </h1>
+</header>,
+          <Form
+            updateCity={[Function]}
+/>,
+          <Restaurant
+            city=""
+            focus={[Function]}
+            restaurants={Array []}
+/>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "focus": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h1
+              className="App-title"
+>
+              Find the best restaurants, cafés, and bars in
+              <span>
+                             
+                            
+              </span>
+</h1>,
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Find the best restaurants, cafés, and bars in",
+                <span>
+                   
+                  
+</span>,
+              ],
+              "className": "App-title",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Find the best restaurants, cafés, and bars in",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "",
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "h1",
+          },
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "updateCity": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "city": "",
+            "focus": [Function],
+            "restaurants": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="container"
+>
+          <AppBarExampleIconButton
+                    focus={[Function]}
+          />
+          <header
+                    className="App-header"
+          >
+                    <h1
+                              className="App-title"
+                    >
+                              Find the best restaurants, cafés, and bars in
+                              <span>
+                                         
+                                        
+                              </span>
+                    </h1>
+          </header>
+          <Form
+                    updateCity={[Function]}
+          />
+          <Restaurant
+                    city=""
+                    focus={[Function]}
+                    restaurants={Array []}
+          />
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <AppBarExampleIconButton
+              focus={[Function]}
+/>,
+            <header
+              className="App-header"
+>
+              <h1
+                            className="App-title"
+              >
+                            Find the best restaurants, cafés, and bars in
+                            <span>
+                                           
+                                          
+                            </span>
+              </h1>
+</header>,
+            <Form
+              updateCity={[Function]}
+/>,
+            <Restaurant
+              city=""
+              focus={[Function]}
+              restaurants={Array []}
+/>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "focus": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h1
+                className="App-title"
+>
+                Find the best restaurants, cafés, and bars in
+                <span>
+                                 
+                                
+                </span>
+</h1>,
+              "className": "App-header",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Find the best restaurants, cafés, and bars in",
+                  <span>
+                     
+                    
+</span>,
+                ],
+                "className": "App-title",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Find the best restaurants, cafés, and bars in",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "",
+                  ],
+                  "type": "span",
+                },
+              ],
+              "type": "h1",
+            },
+            "type": "header",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "updateCity": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "city": "",
+              "focus": [Function],
+              "restaurants": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

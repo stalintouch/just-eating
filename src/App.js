@@ -6,6 +6,7 @@ import fetchJSON from './scripts/fetchJSON';
 import Form from './Components/Form';
 import focus from './scripts/focus';
 import Navbar from './Components/Navbar';
+import data from './__test__/data/restaurantData.json';
 const restaurantAPIUrl =
   'https://opentable.herokuapp.com/api/restaurants?city=';
 
@@ -20,10 +21,10 @@ class App extends Component {
     });
 
     this.setState({ city: location.city || 'toronto' });
-    const restaurants = await fetchJSON(
-      `${restaurantAPIUrl + this.state.city}`
-    );
-    this.setState({ restaurants: restaurants.restaurants });
+    // const restaurants = await fetchJSON(
+    //   `${restaurantAPIUrl + this.state.city}`
+    // );
+    this.setState({ restaurants: data.restaurants });
   }
 
   updateInput = async inputCity => {
@@ -43,18 +44,18 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="container">
-          <Navbar focus={focus}  />
+          <Navbar focus={focus} />
           <header className="App-header">
             <h1 className="App-title">
               Find the best restaurants, cafés, and bars in
               <span> {this.state.city}</span>
             </h1>
           </header>
-          <Form updateCity={this.updateInput}  />
+          <Form updateCity={this.updateInput} />
           <Restaurant
             city={this.state.city}
             restaurants={this.state.restaurants}
-            focus={focus} 
+            focus={focus}
           />
         </div>
       </MuiThemeProvider>

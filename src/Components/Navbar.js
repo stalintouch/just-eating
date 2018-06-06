@@ -35,6 +35,4 @@ export default class AppBarExampleIconButton extends Component {
     );
   }
 }
-{
-  /* <button id="pepe" type="submit" onClick={this.handleClick}></button> */
-}
+

@@ -1,6 +1,6 @@
 import Restaurant from '../../Components/Restaurant';
-import imagesData from './data/imagesData.json';
-import restaurantData from './data/restaurantData.json';
+import imagesData from '../data/imagesData.json';
+import restaurantData from '../data/restaurantData.json';
 import CircularProgress from 'material-ui/CircularProgress';
 
 describe('<Restaurant />', () => {
