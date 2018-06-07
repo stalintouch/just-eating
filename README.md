@@ -4,7 +4,7 @@ A restaurant lookup app that lets you use your current geographical city or any 
 
 Please visit (https://just-eat-it.herokuapp.com/) to see the app
 
-###To run this app just:
+### To run this app just:
 
 - Download or clone the repo.
 - yarn install
