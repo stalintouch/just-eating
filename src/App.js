@@ -6,7 +6,6 @@ import fetchJSON from './scripts/fetchJSON';
 import Form from './Components/Form';
 import focus from './scripts/focus';
 import Navbar from './Components/Navbar';
-import data from './__test__/data/restaurantData.json';
 const restaurantAPIUrl =
   'https://opentable.herokuapp.com/api/restaurants?city=';
 
@@ -21,10 +20,11 @@ class App extends Component {
     });
 
     this.setState({ city: location.city || 'toronto' });
-    // const restaurants = await fetchJSON(
-    //   `${restaurantAPIUrl + this.state.city}`
-    // );
-    this.setState({ restaurants: data.restaurants });
+    const restaurantsResults = await fetchJSON(
+      `${restaurantAPIUrl + this.state.city}`
+    );
+
+    this.setState({ restaurants: restaurantsResults.restaurants });
   }
 
   updateInput = async inputCity => {
